@@ -7,7 +7,7 @@
 *.swp
 
 # Avoid Pdf files
-**/*.pdf
+*.pdf
 
 # Filesystem
 *~
