@@ -1,0 +1,35 @@
+=====================
+MSWL - Legal Aspects
+=====================
+
+Introduction
+=============
+
+I going to place the exercises and notes from ``Legal Aspects`` Subject in Master de Software Libre that I'm coursing in ``Universidad Rey Juan Carlos``.
+
+LaTeX
+------
+
+I use LaTeX to develop documents in this repository instead of *restructuredText* that is used in README files.
+
+Summary
+========
+
+Brief summary of the exercises and notes.
+
+Notes from class
+-----------------
+
+In the directory **notes/** I'm writting resumes from class and interesting things from the subject.
+
+Chihuly's Law
+-----------------------------
+
+This exercise is related to individual property rights and intellectual property rights.
+
+Read the articlea and answer related questions::
+
+    http://seattletimes.com/html/localnews/2002686721_chihuly16m.html
+
+This exercise is answered in **001-chihulys-lawsuit.tex** file.
+
