@@ -1,0 +1,163 @@
+\documentclass[11pt]{scrartcl}
+
+\title{\textbf{Legal Aspects\\
+				Lesson 2}}
+\subtitle{Copyright on Software}
+\author{Miguel Vidal}
+\date{\today}
+
+\usepackage{amsmath}
+\begin{document}
+
+\maketitle
+
+\section{Introducci\'on}
+
+Cuando y como empez\'o ?
+\begin{itemize}
+	\item Proceso antimonopolio en contra de \textbf{IBM} que dur\'o 13 a\~nos.
+	\item Impidieron que AT\&T fuera l\'ider en software y hardware m\'ovil dejando el c\'odigo de unix a la universidad de Berkeley para que m\'as adelante sacaran la primera versi\'on \textbf{BSD}.
+	\item Portabilidad del \emph{sistema operativo} y \textbf{C} permiti\'o que el software no estuviera ligado intr\'isecamente al hardware.
+	\item Bifurcaci\'on de la que nace la industria del software.
+	\item A partir de estos eventos tenemos un resultado inesperado: unix y la industria del software.
+\end{itemize}
+
+\subsection{Razones}
+
+Copyright en vez de patentes para el software.
+\begin{itemize}
+	\item Autom\'atico
+	\item Protegida por copyright
+	\item No tiene costes
+	\item Documentaci\'on bajo copyright
+	\item Internacionalizado
+	\item Harmoniza con otros trabajos.
+\end{itemize}
+El porqu\'e, \emph{scope}:
+\begin{itemize}
+	\item C\'odigo fuente y binario.
+	\item Descripci\'on del programa.
+	\item Material adicional.
+	\item Interfaces.
+	\item Bases de Datos.
+\end{itemize}
+No entra en el copyright:
+\begin{itemize}
+	\item algoritmos
+	\item procesos
+	\item t\'ecnicas ytilizadas en el desarrollo
+\end{itemize}
+
+\section{Licencias}
+
+Por que necesitamos una licencia ?\\
+Si \textbf{no} licencias tu c\'odigo, tu c\'odigo \textbf{no} puede ser usado \textbf{por nadie m\'as}.\\
+Opci\'on de no usar licencias, es decir, dominio p\'ublico.\\
+Contrato \emph{sinalagm\'atico} (unilateral).\\
+No se han de firmar las condiciones a diferencia de \textbf{EULA}.
+
+\subsection{Dominio P\'ublico}
+
+Donde van las obras cuando expira el \emph{copyright}.\\
+Conflictos en Espa\'na con la donaci\'on al dominio p\'ublico de una obra:
+\begin{itemize}
+	\item Derechos morales, retirada de la obra.
+	\item Derecho de copia privada.
+\end{itemize}
+Soluci\'on de \emph{creative commons}.\\
+La licencia \textbf{CC0}\footnote{http://creativecommons.org/publicdomain/zero/1.0/} para facilitar la publicaci\'on en el domino p\'ublico.
+
+\subsection{FLOSS}
+
+Si no se usa licencia, todos los derechos reservados.\\
+\textbf{Legal Hacking}: define los derechos base del autor a trav\'es del copyright.\\
+M\'axima: \emph{FLOSS are consistnet with IP laws}.
+
+\subsubsection{Tipos de licencias FLOSS}
+
+Debe cumplir las cuatro libertades:
+\begin{enumerate}
+	\item uso
+	\item copia
+	\item edici\'on
+	\item redistribuci\'on
+\end{enumerate}
+
+
+\subsubsection{Academicas}
+
+\begin{itemize}
+	\item Las m\'as simples con muy pocas reestricciones.
+	\item Cualquier tipo de uso incluso generando un software privativo.
+	\item Provienen de las universidades.
+	\item MIT, BSD, ISC
+\end{itemize}	
+
+\subsubsection{Permisivas}
+
+\begin{itemize}
+	\item Similares a las acad\'emicas.
+	\item Marcas registradas, protecci\'on de la marca.
+	\item Cualquier tipo de uso incluso generando un software privativo.
+	\item Concesi\'on de patentes.
+	\item Ejmplo: Licencia Apache; Android.
+	\item Anti patentes ya que \emph{obliga} a que se permita utilizar patentes si alguien las incluye permitiendo que los usuarios puedan utilizar las patentes adjuntas.
+\end{itemize}
+
+\subsubsection{Parcialmente cerrables}
+
+\begin{itemize}
+	\item Protege el 'fichero' para que su licencia no cambie y no obliga a que otros componentes adopten su licencia.
+	\item BSD al enlazar y al modificar copyleft.
+	\item MPL, CDDL, LGPL; 
+\end{itemize}
+
+\subsubsection{Rec\'iprocas, copyleft}
+
+Copyleft \emph{fuerte}.
+\begin{itemize}
+	\item V\'iricas, se reproduce cuando se utiliza con otro c\'odigo.
+	\item Mant\'en siempre la misma licencia.
+\end{itemize}
+
+\subsection{Copyleft \& Permisivas}
+
+Todas son software libre pero englobadas en estos dos grandes grupos:
+\begin{enumerate}
+	\item Copyleft: Pueden hacer obras derivadas privativas.
+	\item Permisivas: No se pueden hacer obras derivadas privativas.
+\end{enumerate}
+
+\subsubsection{Permisivas}
+
+Restricciones permisivas.
+\begin{itemize}
+	\item Atribuci\'on a los autores.
+	\item Transmisi\'on de libertades.
+	\item Mantener las libertades.	
+	\item Protecci\'on de libertades. Antipatentes, DRM.
+\end{itemize}
+
+\subsection{Compatibilidad}
+
+Compatibilidad entre las licencias.
+
+\subsection{Dual-lisencing}
+
+Diferentes t\'erminos de licencias.
+
+\subsection{Proliferaci\'on de Licencias}
+
+Incrementaron exponencialemnte y complic\'o las compatibilidades entre distintas distribuciones.
+
+\subsection{Patentes}
+
+Duraci\'on de 20 a\'nos para pasar al dominio p\'ublico. Para ser una patente ha de cumplir que sea \'util, novedos, no tenga arte previo.
+\begin{thebibliography}{9}
+
+	\bibitem{microsoft}
+		CNNExpansion,\\
+		\emph{UE: Microsoft viola normas antimonopolio}.\\
+		http://www.cnnexpansion.com/negocios/2009/01/16/ue-microsoft-viola-normas-antimonopolio
+\end{thebibliography}
+\end{document}
