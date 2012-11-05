@@ -1,0 +1,76 @@
+\documentclass[11pt]{scrartcl}
+
+\title{\textbf{Legal Aspects}}
+\subtitle{EUPL: European Union Public Licence}
+\author{Miguel Vidal}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercise}
+
+Search on the web the European Union Public Licence (EUPL)\footnote{http://joinup.ec.europa.eu/software/page/eupl/licence-eupl}. Read it in the language of your choice and answer the next questions:
+\begin{enumerate}
+
+	\item \textbf{What kind of license is? (Non-free/permissive/reciprocal...). Justify it.}\\
+	
+	Free/Open Source Software License\footnote{http://joinup.ec.europa.eu/software/page/eupl/how-use-eupl\#section-2} that covers the four freedoms: use, copy, modify and distribute.
+	
+	Has Hard Copyleft like GPL: \emph{To avoid software appropriation by third parties, a majority of open source projects have adopted copyleft licensing terms: the two Gnu GPLs and the EUPL are “copyleft”\footnote{http://joinup.ec.europa.eu/software/page/licence\_compatibility\_and\_interoperability}.}
+	\item \textbf{How does it solve incompatibility with copyleft licenses?}
+	
+	There is a matrix for copyleft licence compatibilities\footnote{https://joinup.ec.europa.eu/software/page/eupl/eupl-compatible-open-source-licences} where there are two ways to make the study of EUPL:
+
+	\begin{itemize}
+		\item Upstream: Allows you to merge it to work covered by another F / OSS license into a larger work That You may distribute under the EUPL.
+
+		\item Downstrem: Allows you to merge it the work received under the EUPL into a larger Work That you may distribute under a "compatible" license. This is the scope of the EUPL own compatibility list (\# 5 EUPL compatibility clause and Appendix GPLv2 That includes, OSL, Eclipse, CPL and CeCILL)
+	\end{itemize}
+	
+	Thus with this two ways to merge compatible licenses avoid the incompatibility with other copyleft licenses, taking the properties of the first ones or becoming one defined in Downstream path.
+	
+	\item \textbf{Examine carefully and compare the section 13 of both license versions (1.0 and 1.1). What has it been changed? What do you think it is due this change?}
+	
+	In version 1.1 the sentence \emph{without reducing the scope of the rights granted by the Licence} is added to section 13.
+	
+	\emph{The key word in Article 13 is reasonable. The European Commission (EC) can indeed update the license, e.g. to cope with new or previously unknown legal problems that would otherwise keep the license from functioning as intended. However, any such changes must be reasonable, meaning that they cannot tamper with basic characteristics of the license, such as the freedoms it grants you, the liability exemption, or its reciprocal character”\footnote{http://joinup.ec.europa.eu/software/page/eupl/how-use-eupl\#section-16}.}
+	
+	That means that every new version wouldn't deprive of basic freedoms defined in previous versions of the license to remain thus obtained rights through the EUPL license.
+	
+	\item \textbf{Is it applicable outside the EU? What is the geographic scope of the license?}\\
+
+	This License applies within the European Union countries to be governed by the laws of each country.
+
+	Include a clause covers the nonresident licensors in the European Union which will be governed by Belgian law.
+
+	So if applicable outside the European Union to benefit from the Belgian legislation (Section 15).
+	
+	\item \textbf{Does it have anti-patent defense? If so, how is it implemented? (quote the passage). How does it work?}\\
+
+	Yes EUPL has anti-patent defense in the 2nd clause \emph{Scope of the rights granted by the Licence}:
+
+		\emph{The Licensor grants to the Licensee royalty-free, non exclusive usage rights to any
+patents held by the Licensor, to the extent necessary to make use of the rights granted
+on the Work under this Licence.}
+
+	\item \textbf{Does it contain an Affero clause? Where? (quote the passage)}
+
+		Yes, contains the Affero clause explained in this section \textbf{EUPL's FAQ} in wich publish the software even as an internet service is threaten like a communication to the public of a new distribution:
+		
+		\emph{However, this means also that, if you modify or improve some EUPL licensed software and use it to provide your services on line to the general public, you have to make your modified source code available on a repository, in order to allow the original author as well as other members of the «developers community » to benefit from your contributions, as the case could be\footnote{http://joinup.ec.europa.eu/software/page/eupl/how-use-eupl\#section-22}.}
+
+		\emph{If you decide to redistribute or to communicate to the public the resulting work, you will have to do so under the EUPL provisions (including the publication of your source code on a repository). Using the modified software to provide services via Internet is considered as a « communication to the public »\footnote{http://joinup.ec.europa.eu/software/page/eupl/how-use-eupl\#section-23}.}
+	
+\end{enumerate}
+
+\begin{thebibliography}{9}
+
+	\bibitem{eupl}
+		EUPL,\\
+		European Union Public Licence,\\
+		http://joinup.ec.europa.eu/software/page/eupl
+		
+\end{thebibliography}
+\end{document}
