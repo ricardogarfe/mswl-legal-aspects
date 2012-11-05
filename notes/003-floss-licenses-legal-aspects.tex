@@ -1,0 +1,207 @@
+\documentclass[11pt]{scrartcl}
+
+\title{\textbf{Legal Aspects\\
+				Lesson 3}}
+\subtitle{FLOSS Licensing}
+\author{Miguel Vidal}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducci\'on}
+
+Si no licencias tu c\'odigo no se puede compartir.\\
+Existen m\'as de 1000 licencias.\\
+Licencias recomendadas:
+\begin{itemize}
+
+	\item Acad\'emica/permisivas puede utilizarse todo tipo de software.
+	\item Weak Copyleft, mantener la misma licencia.
+	\item Strong Copyleft, Obligan a ser copyleft.
+\end{itemize}
+
+\section{Academic}
+
+\subsection{BSD Licenses}
+
+BSD es una variante de Unix que se remonta a los a\~nos 80 (1988). Exist\'ia previamente a GPL.
+
+\begin{itemize}
+
+	\item Es conocida como Minimalista.
+	\item Redistribuir el c\'odigo sin a\~nadir ninguna restricci\'on.
+	\item Actual licencia \textbf{BSD} se basa en la descrita en el a\~no 1988.
+	\item No existe garant\'ia.
+\end{itemize}
+
+Funcionalmente es como el dominio p\'ublico siempre y cuando contemos con el c\'odigo fuente disponible.
+
+\subsubsection{Ventajas}
+
+No hay restricciones a la evoluci\'on del software como por ejemplo la estandarizaci\'on de un producto.
+
+\begin{itemize}
+
+	\item Integraci\'on en un proyecto privativo.
+	\item Puede convertirse en c\'odigo abierto o privado.
+	\item No existe complicaci\'on legal como en \emph{GPL} o \emph{LGPL}. No existen violaciones de la licencia\footnote{}.
+	\item No hace falta invertir mucho tiempo adaptarla y no da quebraderos de cabeza.
+\end{itemize}
+
+\subsubsection{4 Cl\'ausulas}
+
+A partir de la base \emph{Redistribuci\'on y uso del siguiente c\'odigo.}:
+
+TODO: Completar con las 4 cl\'ausulas.
+
+Redistributions of source code must retain the above copyright notice this list of conditions adn the following disclaimer.
+
+\subsubsection{3 Cl\'ausulas}
+
+La cl\'ausula de publicidad desapareci\'o debido a que se sobrecargaba por la referencia al creador y arrastraba todas las anteriores debido a la creaci\'on desmedida de las licencias utilizando esta como plantilla.
+
+\subsubsection{2 Cl\'ausulas}
+
+Desaparece la \'ultima.
+
+\subsubsection{Disclaimer}
+
+Nada de garant\'ia a no ser que se proporcione un servicio asociado al software.
+
+\subsection{BSD-like}
+
+\subsubsection{ISC}
+
+La licencia m\'as corta de FLOSS que enfatiza con claridad en referencia a los permisos; \emph{usar, copiar, modificar y/o distribuir}.\\
+Ejemplos; openBSD...
+
+\subsubsection{MIT}
+
+Es m\'as expl\'icita referente a los derechos que otorga \emph{uso, copia, modificaci\'on, pubicaci\'on... y/o vender copias}.\\
+Ejemplos; Putty, RubyOnRails, X11...
+
+\subsubsection{Zope}
+
+\subsubsection{WTFPL}
+
+"Do What The Fuck You Want To Public License".
+
+\subsubsection{Ejemplos}
+
+Darren Reed a trav\'es de ipfilter ya que no se pod\'ia modificar el c\'odigo del programa por lo tanto \textbf{no} es software libre.
+Theo de Raadt propuso eliminarlo de la distribuci\'on de BSD y encontrar un sustituto "we will have to work on an alternative".\\
+Se cre\'o \emph{Packet Filter} que se consolid\'o como la alternativa, pfsense dentro de FreeBSD pero no existe versi\'on para Linux.
+
+\section{Permisiva}
+
+\subsection{Apache}
+
+Originalmente era una BSD acad\'emica de 3 cl\'ausulas.
+Puede ser integrada en proyectos de software privado.
+\emph{Apache License 2.0} (Enero de 2004):
+\begin{itemize}
+	\item Facilitar el uso en proyectos generales fuera de la Apache Software Foundation (ASF).
+	\item Facilitar el uso de patentes a todo el mundo, es decir no hacer pagar por ello al que lo usa con una licencia. Cada contribuidaor se beneficiar\'a de una licencia de uso
+	\item Patent retaliation: intenta litigar con la excusa de que hay c\'odigo patentado pierde el derecho a utilizarlo.
+\end{itemize}
+
+Compatible con GPLv3 pero s\'olo convirti\'endose a GPLv3 e incompatible con GPLv2.
+
+\section{Weak copyleft}
+
+S\'olo se preocupa de su propio fichero fuente, mantiene el fichero fuente con la misma licencia que se ha definido.\\
+
+MPL 1.1:
+\begin{itemize}
+	\item cl\'ausula anti patentes.
+\end{itemize}
+Ejemplos; MPL (Mozilla Public License).Firefox se acoge a m\'ultiples licencias (MPL, GPL, LGPL).
+
+MPL 2.0:
+\begin{itemize}
+	\item Compatible con Apache y GPL.
+\end{itemize}
+
+\subsection{CDDL}
+
+Basada en MPL como obra derivada que se cre\'o por Sun Microsystems para el proyecto Solaris:
+\begin{itemize}
+
+	\item OSI-Compliant 2004.
+	\item Incompatible con GPL.
+\end{itemize}
+
+\subsection{LGPL}
+
+Lesser GPL, originalmente significaba \emph{Library} para poder estandarizar las librer\'ias del proyecto para que de esta forma no se convierta todo en copyleft siendo as\'i una permisiba:
+\begin{itemize}
+
+	\item Cl\'ausula para enlazar con cualquier librer\'ia. Linking exception; una obra que usa una librer\'ia.
+\end{itemize}
+Ejemplos; OpenOffice, etc...\\
+\'Esta es la \'unica diferencia con la GPL.\\
+
+\section{Strong Copyleft}
+
+\subsection{GPL}
+
+GNU Public License.
+\begin{itemize}
+	\item primera licencia que implement\'o el concepto de \emph{copyleft}. Todas las licencias copyleft que se han creado han partido de \'esta.
+	\item Impedir la comercializaci\'on privativa del software.
+	\item No se puede combinar con otro c\'odigo con una licencia que no sea compatible.
+\end{itemize}
+
+\subsubsection{Copyleft}
+
+Modificar copia o copias del programa siempre que:
+\begin{itemize}
+	\item Avisar que se ha cambiado y cuando
+	\item Distribuir bajo esta misma licencia
+\end{itemize}
+
+\subsubsection{No EULA}
+
+No es necesario la aceptaci\'on esta licencia mediante una firma.
+
+\subsubsection{Versions}
+
+Historia de las distintas versiones GPL:
+\begin{itemize}
+	\item GPL version 1 (1989): "Version 1 or later." Gen\'erica independiente del programa.
+	\item GPL version 2 (1991): "Libery or dead" por 'culpa' de las patentes.
+	\item GPL version 3 (2007): Patentes, DRM, Tivoizaci\'on a trav\'es de la comunidad.
+\end{itemize}
+
+\subsubsection{Affero AGPL}
+
+Esta licencia se define con una cl\'ausula extra que obliga a distribuir el c\'odigo cuando el software es SaaS.
+
+\subsubsection{Interpretaci\'on FSF}
+
+\begin{itemize}
+	\item Enlazar un programa GPL en la compilaci\'on produce un programa GPL.
+	\item La salida de un programa \emph{no} es un programa derivado.
+	\item Linux es GPL, cualquier c\'odigo enlazado debe ser GPL. Drivers por separado; NVidia, etc...
+\end{itemize}
+
+\subsubsection{Interpretaci\'on de Lawrence Rosen}
+
+Lawrence Rosen\footnote{http://en.wikipedia.org/wiki/Lawrence\_Rosen\_(attorney)} Interpreta que:
+
+Si existe un enlace din\'amico a una librer\'ia GPL el software resultante no es GPL ya que no es una obra derivada sino un obra colectiva.
+Es la aplicaci\'on del copyright estadounidense la que corresponde con la obra derivada de la FSF crea una incongruencia.
+
+\section{Conclusi\'on}
+
+perspectivas y necesidades en un determinado momento.
+
+\begin{thebibliography}{9}
+
+\bibitem{licenciasosi}
+  OSI Licences.
+
+\end{thebibliography}
+\end{document}
