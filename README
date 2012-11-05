@@ -23,7 +23,7 @@ Notes from class
 In the directory **notes/** I'm writing resumes from class and interesting things from the subject.
 
 Chihuly's Law
------------------------------
+--------------
 
 This exercise is related to individual property rights and intellectual property rights.
 
@@ -32,4 +32,11 @@ Read the article and answer related questions::
     http://seattletimes.com/html/localnews/2002686721_chihuly16m.html
 
 This exercise is answered in **001-chihulys-lawsuit.tex** file.
+
+Software Patterns
+------------------
+
+This exercise is related to software patterns in FLOSS project and how to defend FLOSS developers against them.
+
+This exercise is answered in **003-patterns-in-floss.tex** file.
 
