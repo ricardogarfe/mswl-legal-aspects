@@ -1,0 +1,84 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\title{\textbf{Lesson 5}}
+\subtitle{Choose a License}
+\author{Miguel Vidal}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Previous criteria}
+
+Hay unos pasos previos a tener en cuenta a la hora de elegir una licencia:
+\begin{itemize}
+    \item Tipos de licencia.
+    \item Cuando.
+    \item Libertades básicas, es decir uso de licencias libres.
+    \item Mayor grado de diseminación, licencias permisivas.
+    \item Mantener el control sobre la evolución del software; pactos de reciprocidad, copyleft.
+    \item Reconocimiento de la autoría, patentes, etc.
+\end{itemize}
+Se han de seguir estos pasos previamente para la elección de la licencia, no a la inversa ya que nos podemos encontrar con reestricciones con las que no contábamos por el mero hecho de haber elegido la licencia \emph{por simpatía} y no por estos criterios descritos.
+
+\section{Evaluación de la Licencia}
+\emph{Comprobar en FSF, OSI, Debian project, Wikipedia (EN)\footnote{Wikipedia no es una fuente fiable sin que se comprueben las referencias}, analogies/templates, Check 4 freedoms/OSD}.\\
+
+Este proceso se redacta para no tener que llegar a leer la licencia, es decir seguir unas guías donde se publican las licencias de software libre\footnote{Ver gráfico de las diapositivas de clase} y comprobar la existencia de la misma evitando toparnos con ella.
+
+\section{Casos}
+
+\begin{itemize}
+    \item Obras derivadas.
+    \item Autoría ? 
+    \item Enlaces a mi trabajo. Copyleft reducido, débil.
+    \item Evitar restricciones. Estables estándar, permisivo.
+    \item Debe ejecutarse con uno en particular. GPL.
+    \item Patentes en mi programa ? Permisivas, copyleft.
+\end{itemize}
+
+\section{Aplicar la licencia}
+
+\begin{itemize}
+    \item LICENSE o COPYING archivo.
+    \item Copyright y resumen de la licencia en cada archivo de código fuente.
+    \item Al menos 
+    \item Información sobre cómo contactar con los licenciatarios
+    \item Si es interactivo, mostrar la licencia al iniciarlo o a través del comando de ayuda.
+    \item Si tiene una GUI se puede incluir en el menú la información sobre la licencia.
+\end{itemize}
+
+Método archivo por archivo; con un resumen en la cabecera de cada archivo. Según la FSF está más sujeto a errores debido a los posibles cambios.
+Método único; Un fichero donde se muestra la licencia. Puede acabar un fichero sin licencia por lo tanto, todos los derechos reservados y no sería libre.
+
+\section{Dual Licencing}
+
+El porqué del doble licenciamiento, posibles:
+\begin{itemize}
+    \item Distribución de un software bajo dos o más licencias (Perl, Mozilla/Firefox, MySQL).
+    \item Segregación de mercados; basado en modelos de negocio (MySQL enterprise).
+    \item Ofrecer versiones previas a la liberación.
+\end{itemize}
+
+Evita incompatibilidades mediante la creación de \emph{n} versiones por cada licencia definida en el proyecto.
+Eben Moglen; creó Sotfware Freedom Law Center\footnote{http://www.softwarefreedom.org/}. Según esta organización (entre BSD y GPL) es mejor utilizar BSD para que así no se pierda la licencia del fichero (librería, etc...) en si al incorporarlo dentro de un proyecto GPL.
+
+\section{Incompatibilidad}
+
+No cumplan todos los términos de ambas licencias, es decir que en una en relación a la otra tienen incompatibilidades. Mientras \textbf{no se haga una distribución} no se valoran las licencias.
+
+\begin{itemize}
+    \item Copyleft; suelen ser incompatibles a menos que se declare explícitamente con cual es compatible.
+    \item Linked; 
+    \item Bifurcación (fork); Nombre diferente y otra licencia. GPL mantiene la licencia en cada fork. BSD no es necesario, es decir depende del licenciador.
+    \item En Software Privativo no puede producirse como sabemos.
+    \item GPL tiene tendencia a evitar la bifurcación ya que obliga a mantener la licencia.
+    \item Las licencias tipo BSD son propensas al fork.
+\end{itemize}
+
+Existen casos de éxito a partir de un fork, por ejemplo; openBSD/386BSD, Gnu-Emacs/Xemacs, GForge/SourceForge, OpenSolaris/Illumos.
+
+\end{document}
