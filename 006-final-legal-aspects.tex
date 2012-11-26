@@ -13,6 +13,8 @@
 
 \tableofcontents
 
+\newpage
+
 \section{Introducción}
 
 La vida de Java está llena de caminos en el filo de la navaja entre los mundos de lo privativo, lo libre y la libertad. Este es un resumen a groso modo de la historia del lenguaje de programación Java desde sus inicios hasta la fecha de hoy \date{\today}.\\
@@ -25,9 +27,13 @@ Todos estos cambios de nombre fueron debidos a que colisionaban con distintas ma
 El equipo de desarrolladores estaba encabezado por \emph{James Gosling}\footnote{http://en.wikipedia.org/wiki/James\_Gosling}, un desarrollador canadiense que es el origen de esta historia cuando se publicó la primera versión alpha y beta en 1995 hasta la primera versión estable en 1996 1.0 que incluía la máquina virtual.\\
 Java es un lenguaje que destaca por su máxima "write once, run anywhere" (WORA), es decir se puede desarrollar una aplicación y al compilarse ésta ya es funcional en cualquier tipo de entorno, no es necesario volverla a compilar en la plataforma de destino. Esta afirmación encierra por debajo una máquina virtual que es la encargada de hacer que el software funcione en cada plataforma la JVM\footnote{http://www.java.com/es/download/manual.jsp?locale=es} - \emph{Java Virtual Machine} que no es libre, aquí llega la conexión con la incoherencia, para poder ejecutarlo en cualquier entorno ha de usado bajo la máquina virtual propietaria.
 
-\section{Libertad de...}
+\subsection{Java Communitty Process - JCP}
 
-Una cosa está clara, Java es un lenguaje de programación libre, si nos acotamos al lenguaje en si. La instalación en nuestro sistema operativo de la versión JDK (Java Development Kit) nos da la posibilidad de utilizar el lenguaje para crear lo que necesitemos mediante su sintaxis haciéndolo funcionar a través de su máquina virtual.\\
+Java Community Process\footnote{http://www.jcp.org/en/home/index} \emph{JCP} es una organización que fue creada en 1998 desde la versión J2SE 1.4 por Sun para que estandarizar a través de la comunidad los desarrollos técnicos de Java y la evolución del lenguaje. Sometiéndolos a votación mediante los \emph{Java Specification Requests JSRs} o las evoluciones del mismo mediante las \emph{Java Language Specification JLS} que podían ser promovidos por cualquier persona de la comuniada para así mejorar Java a través de la gente que más lo usa y por lo tanto más está interesada en que mejore. 
+
+\section{JVM: la libertad de...}
+
+Una cosa está clara, Java es un lenguaje de programación libre, si nos acotamos al lenguaje en si. La instalación en nuestro sistema operativo de la versión JDK (Java Development Kit) nos da la posibilidad de utilizar el lenguaje para crear lo que necesitemos mediante su sintaxis haciéndolo funcionar a través de su máquina virtual (JVM).\\
 Como se puede ver, hay dos fases en el desarrollo de un software mediante Java:
 \begin{enumerate}
 \item Desarrollar el Software (incluyo la compilación considerando la compilación como Software en si para el tratamiento en este texto).
@@ -46,7 +52,9 @@ En este caso donde chocan las libertades podemos contemplar a tres actores en la
 
 \subsection{Free Software Foundation}
 
-Empezaremos por la FSF que por medio de Richard Stallman mediante la redacción de artículos y especificaciones en licencias relacionadas con Java y su JVM.\\
+Empezaremos por la FSF que por medio de Richard Stallman mediante la redacción de artículos y especificaciones en licencias relacionadas con Java y su JVM.
+
+\subsubsection{Java trap}
 
 El primer artículo 'La trampa de Java'\footnote{http://www.gnu.org/philosophy/java-trap.es.html} escrito en el año 2004 describe la posición de la FSF recomendando el no uso de la JVM por los desarrolladores Java:\\
 
@@ -54,14 +62,19 @@ El primer artículo 'La trampa de Java'\footnote{http://www.gnu.org/philosophy/j
     
 Este extracto del texto es el más significativo con respecto a Java y su uso de la JVM en donde nos emplaza al uso de máquinas virtuales Java libres que van haciéndose hueco en el mercado.
 La FSF puso en marcha el proyecto GCJ - \emph{The GNU Compiler for the Java} utilizando los ejemplos de éxito del compilador libre de C (GCC\footnote{http://www.gnu.org/software/gcc/releases.html}) que ofreció una alternativa libre para desarrollar bajo el lenguaje C en entornos libres cuando no existían opciones.
-A la par, también se creó el proyecto \emph{GNU Classpath} que aglutina las librerías Java principales para incluirlas en máquinas virtuales de Java y desarrollar bajo esta estructura de una forma completamente libre.
+
+\subsubsection{GNU Classpath}
+
+A la par, también se creó el proyecto \emph{GNU Classpath}\footnote{http://www.gnu.org/software/classpath/} que aglutina las librerías Java principales para incluirlas en máquinas virtuales de Java y desarrollar bajo esta estructura de una forma completamente libre.
 El proyecto GNU Classpath está publicado bajo GPLv3 donde se incluye una cláusula asociada a la licencia:\\
 
     \emph{Linking this library statically or dynamically with other modules is making a combined work based on this library. Thus, the terms and conditions of the GNU General Public License cover the whole combination.
 As a special exception, the copyright holders of this library give you permission to link this library with independent modules to produce an executable, regardless of the license terms of these independent modules, and to copy and distribute the resulting executable under terms of your choice, provided that you also meet, for each linked independent module, the terms and conditions of the license of that module. An independent module is a module which is not derived from or based on this library. If you modify this library, you may extend this exception to your version of the library, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version.
 As such, it can be used to run, create and distribute a large class of applications and applets. When GNU Classpath is used unmodified as the core class library for a virtual machine, compiler for the java languge, or for a program written in the java programming language it does not affect the licensing for.}\\
 
-En donde destacamos que si se utiliza como módulo de un software sin modificación alguna la licencia GPL no afecta al licenciamiento de el software creado, es decir no es un programa derivado y actúa como biblioteca para que de esta forma no influya si se utiliza en la creación de una máquina virtual y esto implique que todo el código deba ser licenciado bajo la misma licencia, GPLv3.\\
+En donde destacamos que si se utiliza como módulo de un software sin modificación alguna la licencia GPL no afecta al licenciamiento de el software creado, es decir no es un programa derivado y actúa como biblioteca para que de esta forma no influya si se utiliza en la creación de una máquina virtual y esto implique que todo el código deba ser licenciado bajo la misma licencia, GPLv3.
+
+\subsubsection{The Curious Incident of Sun in the Night-Time}
 
 En 2006 la empresa Sun empezó a plantearse la publicación de Java como código GPL, mientras la FSF seguía crítica después del anuncio de la propia empresa de publicar pero bajo un acuerdo de no divulgación (NDA inglés) para que los binarios de la JVM pudiesen ser publicados bajo una distribución GNU/Linux, es decir incluir por defecto su intérprete para la expansión de su uso. Caso el cual la FSF no tuvo en consideración debido a que no seguía los criterios de Software Libre ya que seguía aparecer el código fuente:\\
 
@@ -72,69 +85,55 @@ Por lo que la noticia, llamada no noticia por la FSF en el artículo 'El curioso
 \subsection{Apache Software Foundation}
 
 ¿ Donde se encuentra la Fundación Apache en este instante ? La Fundación Apache (ASF) es una de las grandes precursoras del lenguaje de programación Java y las libertades del Software por lo que han recorrido un largo camino juntos.\\
-Podemos ver que hay un total de 162 proyectos realizados en Java en la página web de 'ASF projects'\footnote{http://projects.apache.org/indexes/language.html\#Java} en comparación con C de los que Apache mantiene 18. A simple vista se puede apreciar la colaboración entre Java y ASF. Dentro de los cuales destaca el proyecto \emph{Apache Harmony}, una máquina virtual Java propia. Hoy en día el proyecto está habandonado por la ASF y lo heredó Google para crear su propia máquina virtual Dalkin\footnote{http://code.google.com/p/dalvik/} publicada durante el año 2010 (primera revisión de código fuente, ya que no he encontrado ninguna referencia por lo que esta es la más fiable\footnote{http://code.google.com/p/dalvik/source/detail?r=1}) con licencia Apache Version 2.0\footnote{http://www.apache.org/licenses/LICENSE-2.0}.
+Podemos ver que hay un total de 162 proyectos realizados en Java en la página web de 'ASF projects'\footnote{http://projects.apache.org/indexes/language.html\#Java} en comparación con C de los que Apache mantiene 18. A simple vista se puede apreciar la colaboración entre Java y ASF. Dentro de los cuales destaca el proyecto \emph{Apache Harmony}, una máquina virtual Java propia. Hoy en día el proyecto está abandonado por la ASF y lo heredó Google para crear su propia máquina virtual Dalkin\footnote{http://code.google.com/p/dalvik/} publicada durante el año 2010 (primera revisión de código fuente, ya que no he encontrado ninguna referencia por lo que esta es la más fiable\footnote{http://code.google.com/p/dalvik/source/detail?r=1}) con licencia Apache Version 2.0\footnote{http://www.apache.org/licenses/LICENSE-2.0}. Por lo que ASF también estaba preocupada por la implementación libre de una VM para poder ejecutar Java ya que la mayoría de sus proyecto dependen de este lenguaje y desarrollaban su propia VM Libre.
 
-Por lo que ASF también estaba preocupada por la implementación libre de una VM para poder ejecutar Java ya que la mayoría de sus proyecto dependen de este lenguaje y pueden considerarse expertos.
+\subsubsection{Conflicto con Java SE 7}
 
-Durante el periodo previo de liberación de Java por parte Sun como Software Libre bajo GPLv2 donde se discutían los 
+La ASF ha sido un miembro muy activo dentro de la evolución de Java mediante su puesto en el comité ejecutivo de la Java Community Process en el que ha sido nombrado Miembro del Año 4 veces a lo largo de los 10 años que ocupó el puesto. Puesto que dejó atrás debido a sus discrepancias\footnote{http://blogs.apache.org/foundation/date/20101209} con respecto al proceso de licenciamiento sobre \emph{Java SE7}:\\
+
+    \emph{Oracle provided the EC with a Java SE 7 specification request and license that are self-contradictory, severely restrict distribution of independent implementations of the spec, and most importantly, prohibit the distribution of independent open source implementations of the spec.}\\
+    
+Oracle como dueño de Sun aboga por imponer sus normas por encima de la comunidad con más de 10 años de experiencia en el modelo evolutivo de Java (1998 a 2010), por lo que ASF promueve la no aceptación por parte del Comité Ejecutivo (EC) de la \emph{JCP} de la versión 7 pero se encuentra con un proceso viciado por intereses empresariales que le afectan directamente a ellos mismos como fundación y por tanto a todos los desarrolladores de Java.\\
+
+Oracle no acepta que el proyecto Harmony como válido para pasar los test de la \emph{TCK license} por lo que priva a los desarrollodores de Java de una máquina virtual oficial libre en la que puedan respaldar sus proyectos violando las libertades añadiendo restricciones privativas a las licencias TCK para ser incompatibles con las licencias libres\footnote{http://blogs.apache.org/foundation/entry/statement\_by\_the\_asf\_board1}:\\
+
+    \emph{Through the JSPA, the agreement under which both Oracle and the ASF participate in the JCP, the ASF has been entitled to a license for the test kit for Java SE (the "TCK") that will allow the ASF to test and distribute a release of the Apache Harmony project under the Apache License. Oracle is violating their contractual obligation as set forth under the rules of the JCP by only offering a TCK license that imposes additional terms and conditions that are not compatible with open source or Free software licenses. The ASF believes that any specification lead that doesn't follow the JCP rules should not be able to participate as a member in good standing, and we have exercised our votes on JSRs -- our only real power on the JCP -- accordingly.  We have voted against Sun starting and continuing JSRs, and have made it clear that we would vote against the JSR for Java SE 7 for these reasons.}
+
+Por lo que la ASF acaba diciendo sobre la JCP \emph{"JCP specifications are nothing more than proprietary documentation."} y retirándose del comité debido a la falta de democratización e incursión de Oracle en las propias decisiones de la comunidad como empresa propietaria mediante el licenciamiento privativa que coarta la libertad de obtener una \emph{VM licenciada por TCK libre}.
 
 \subsection{Sun}
 
 Para conocer un poco más a la empresa Sun hemos de verla como empresa y delante de una estrategia comercial.
-Microsoft
 
-\subsubsection{Java Communitty Process - JCP}
+Licencia libre a partir de 2006 a través de la Java Communitty Process y de como la integración de la comunidad empuja el proyecto hacia arriba en el peor momento de la historia de java con respecto a la demanda y uso.% TODO: Imagen de la gráfica de TIOBE http://www.tiobe.com/content/paperinfo/tpci/images/history_Java.png.
 
-Java Community Process\footnote{http://www.jcp.org/en/home/index} \emph{JCP} es una organización que fue creada en 1998 por Sun para que estandarizar a través de la comunidad los desarrollos técnicos de Java. Sometiéndolos a votación mediante los Java Specification Requests \emph{JSRs} que podían ser promovidos por cualquier persona de la comuniada para así mejorar Java a través de la gente que más lo usa y por lo tanto más está interesada en que mejore.
+\subsection{Sun becomes Oracle}
 
-\subsection{Conflicto con ASF}
-
-Abandono del puesto de miembro en el Executive Committe de Java Community Process por parte de Apache Software Foundation\footnote{http://blogs.apache.org/foundation/date/20101209}.
-
-\subsection{2004}
-
-Java Communitty Process y de como la integración de la comunidad empuja el proyecto hacia arriba en el peor momento de la historia de java con respecto a la demanda y uso.% TODO: Imagen de la gráfica de TIOBE.
-
-\subsection{2006}
-
-
-\subsection{2007}
-
+\subsection{Google}
 
 \section{JVM Alternativas}
 
-Como hemos comentado se han creado alternativas a la JVM 
-Dalvik - Google Virtual Machine\footnote{http://code.google.com/p/dalvik/} que se crea a partir del proyecto Apache Harmony\footnote{http://harmony.apache.org/} retirado de la Apache Software Foundation
-Hotspot - OpenJDK Virtual Machine\footnote{http://openjdk.java.net/groups/hotspot/}.
-Kaffe - Kaffe is a clean room implementation of the Java virtual machine, plus the associated class libraries needed to provide a Java runtime environment\footnote{http://www.kaffe.org/}.
-OpenJDK - The place to collaborate on an open-source implementation of the Java Platform, Standard Edition, and related projects\footnote{http://openjdk.java.net/}.
-GCJ - The GNU Compiler for the Java\footnote{http://gcc.gnu.org/java/}.
+Como hemos comentado se han creado alternativas a la JVM oficial de Java bajo Licencias de Software Libres, aquí hay un pequeño resumen de las más conocidas:
+\begin{itemize}
+    \item Dalvik - Google Virtual Machine\footnote{http://code.google.com/p/dalvik/} que se crea a partir del proyecto Apache Harmony\footnote{http://harmony.apache.org/} retirado de la Apache Software Foundation
+    \item Hotspot - OpenJDK Virtual Machine\footnote{http://openjdk.java.net/groups/hotspot/}.
+    \item Kaffe - Kaffe is a clean room implementation of the Java virtual machine, plus the associated class libraries needed to provide a Java runtime environment\footnote{http://www.kaffe.org/}.
+    \item OpenJDK - The place to collaborate on an open-source implementation of the Java Platform, Standard Edition, and related projects\footnote{http://openjdk.java.net/}.
+    \item GCJ - The GNU Compiler for the Java\footnote{http://gcc.gnu.org/java/}.
+\end{itemize}
 
-\section{Entra en juego Oracle}
+\section{James Gosling}
 
+James Gosling abandona Oracle en 2010\footnote{http://nighthacks.com/roller/jag/entry/time\_to\_move\_on}, ya no nos acordábamos que todo nació de la mente de este hombre y el equipo de personas que trabajabaron con él; Arthur Van Hoff\footnote{http://www.linkedin.com/in/aavanhoff}, y Andy Bechtolsheim\footnote{http://en.wikipedia.org/wiki/Andy\_Bechtolsheim}. Abandonó Oracle en el año más convulso para la compañía con la guerra interna dentro de la JCP con la ASF, se sintió libre.\\
 
-\section{Vuelta atrás}
-
-Disputa por la creación de máquinas virtuales en las que Oracle obligaba a que fuesen privativas si estas evolucionaban de la propia de JVM de Java pasando los test TCK y pagando por la licencia.
-
-\subsection{Conflicto con ASF}
-
-Abandono del puesto de miembro en el Executive Committe de Java Community Process por parte de Apache Software Foundation\footnote{http://blogs.apache.org/foundation/date/20101209}.
-
-\section{Presente}
-
-James Gosling abandona Oracle en 2010\footnote{http://nighthacks.com/roller/jag/entry/time\_to\_move\_on}.	
-
-\section{Google}
-
-
+Volvemos a echar la vista al gráfico de la evolución de Java durante esta época y podemos darnos cuenta que en el año 2010 la popularidad de Java sufrió un varapalo importante del que parecía haberse recuperado. Comparando ambas situaciones, la caída de 2004 fue mucho mayor pero también hemos visto la relación presente entre los acontecimientos con respecto a la libertad del software como pueden afectar a un lenguaje de programación, en este caso, en su uso por parte de la comunidad alrededor de la crisis con la ASF por las licencias TCK y el abandono del creador de Java de la empresa encargada de su desarrollo.
 
 \begin{thebibliography}{9}
 
     \bibitem{javahistory}
         Java, historia y presente. Sus actores. La ida de Apache de JCP,\\
         http://elsoftwarelibre.wordpress.com/2010/12/10/java-historia-y-presente-sus-actores-la-ida-de-apache-de-jcp/
-    
+
 \end{thebibliography}
 
 \end{document}
