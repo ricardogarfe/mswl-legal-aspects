@@ -1,6 +1,7 @@
 # LaTeX ignore files
 *.log
 *.aux
+*.toc
 
 # Gummi LaTeX editor
 *.bak
