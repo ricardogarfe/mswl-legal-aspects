@@ -1,11 +1,11 @@
 \documentclass[11pt]{scrartcl}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 
-\title{\textbf{Legal Aspects}}
-\subtitle{Java: historia de una libertad cuestionada}
+\title{\textbf{Java: historia de una libertad cuestionada}}
+\subtitle{Legal Aspects - MSWL URJC}
 \author{Ricardo García Fernández}
 \date{\today}
 
@@ -13,7 +13,7 @@
 
 \maketitle
 
-\tableofcontents
+%\tableofcontents
 
 \section{Introducción}
 
@@ -38,7 +38,7 @@ Como se puede ver, hay dos fases en el desarrollo de un software mediante Java:
 
 En el segundo punto nos detenemos ya que es ahí donde Java restringe la libertad y obliga a pasar por su máquina virtual mediante su implementación.
 
-\section{Conflictos con la libertad}
+\section{Conociendo a los actores}
 
 Pudiendo tener un software libre implementado en Java pero teniendo que ejecutarse a través de un software privativo por lo que no es completa la libertad de uso al programa.\\
 ¿ Es posible crear una máquina virtual propia que interprete el lenguaje Java y de esta forma crear un ciclo del software completamente libre ? Si pero no puede ser Java ya que tenías que ir Sun pagar por la licencia de esa herramienta pasando los tests TCK (technology compatibility kit) para que pudiera ser 'java compliant' o dicho de otra manera, reconocida como máquina virtual para ejecutar aplicaciones Java.
@@ -115,11 +115,10 @@ El proyecto Harmony acaba abandonado por la ASF en el mes de Noviembre del año 
 
 Para conocer un poco más a la empresa Sun hemos de verla como empresa delante de una estrategia comercial flirteando con ambos bandos.
 
-Sun como hemos expuesto en los inicios de Java creó la implementación para uso privado haciéndolo expansible paultinamente y ganando adeptos exponencialmente debido a su versatilidad, fluidez y facilidad que otorgaba Java al desarrollo. Pudiendo un progama compilado en Java ser ejecutado en cualquier máquina que posea la JVM, la suya.
+Sun como hemos expuesto en los inicios de Java creó la implementación para uso privado haciéndolo expansible paultinamente y ganando adeptos exponencialmente debido a su versatilidad, fluidez y facilidad que otorgaba Java al desarrollo. Pudiendo un progama compilado en Java ser ejecutado en cualquier máquina que posea la JVM, la suya.La implementación de Java creada por ello ha de ser la única oficial además de su propia máquina virtual.
+La licencia con la que se distribuía inicialmente Java es la \emph{Java Research License}\footnote{http://www.java.net/jrl.csp} en la que explícitamente se refiere al uso en el investigación alrededor del mundo académico para usos no comerciales. Esta licencia por lo tanto no es libre ya que restringe la libertad a un único ámbito siendo incompatible con GPL además de no estar aprovada por la OSI ni por la FSF.
 
-Siempre cuidando que la implementación de Java creada por ello fuese la única oficial además de su máquina virtual.
-
-Java Community Process\footnote{http://www.jcp.org/en/home/index} \emph{JCP} es una organización que fue creada en 1998 desde la versión J2SE 1.4 por Sun para que estandarizar a través de la comunidad los desarrollos técnicos de Java y la evolución del lenguaje. Sometiéndolos a votación mediante los \emph{Java Specification Requests JSRs} o las evoluciones del mismo mediante las \emph{Java Language Specification JLS} que podían ser promovidos por cualquier persona de la comuniada para así mejorar Java a través de la gente que más lo usa y por lo tanto más está interesada en que mejore.
+Java Community Process\footnote{http://www.jcp.org/en/home/index} \emph{JCP} es una organización que fue creada en 1998 desde la versión J2SE 1.4 por Sun para que estandarizar a través de la comunidad los desarrollos técnicos de Java y la evolución del lenguaje. Es una comunidad abierta a los colaboradores en donde se proponen y someten a votación los estándares mediante los \emph{Java Specification Requests JSRs} o las evoluciones del mismo lenguaje mediante las \emph{Java Language Specification JLS}. Estas mejoras pueden ser promovidos por cualquier persona de la comuniada para así mejorar Java a través de la gente que más lo usa y por lo tanto más está interesada en que mejore.
 
 En el año 2006 Sun veía como el proyecto se posicionaba de nuevo arriba con un pequeño descenso respecto a la demanda y uso.
 
@@ -133,11 +132,9 @@ En el año 2006 Sun veía como el proyecto se posicionaba de nuevo arriba con un
 El impulso de la comunidad a través de la JCP y las presiones bien intencionadas por parte de la FSF y ASF de liberar el código fuente bajo una licencia libre dieron sus frutos.\\
 Por lo que podemos ver Java se encontraba flanqueada por varios bandos y de capa caída por lo que tomó la decisión de licenciar bajo una licencia de Software Libre. Se decidió finalmente por la GPLv2 en vez de \emph{Common Development and Distribution License (CDDL)}\footnote{http://directory.fsf.org/wiki/License:CDDLv1.0} que es incompatible a su vez con la GPLv2 por ser de copyleft fuerte. La FSF no recomienda su uso debido a la incompatibilidad con su licencia y el apartado que le dedica lamentándose que en el texto de la licencia se utilice la definición de propiedad intelectual.
 
-Sun liberó el OpenSDK bajpo GPL de esta forma accedía a las peticiones de la JCP y la comunidad, con un pero. La liberación de Java bajo GPL con una cláusula nueva con respecto al classpath\footnote{http://openjdk.java.net/legal/gplv2+ce.html}.
+Sun liberó el \emph{OpenSDK bajo GPLv2}, de esta forma accedía a las peticiones de la JCP y la comunidad, con un pero. La liberación de Java bajo \emph{GPLv2 con la cláusula classpath}\footnote{http://openjdk.java.net/legal/gplv2+ce.html}. De la que podemos extraer que si alguien modifica o evoluciona el OpenJDK debe de estar disponible para todo el mundo como así dicta la Licencia GPL pero acogiéndose a la cláusula del classpath puede cerrar su código mientras lo certifique a través de Sun por las TCK por lo que de esta forma gana un dinero y hace que las mejoras no sean públicas debido a que ella misma es la empresa que crea la implementación y la que certifica las implementaciones.
 
-En la que nos referimos a que si alguien modifica o evoluciona el OpenJDK debe de estar disponible para todo el mundo como así dicta la Licencia GPL pero acogiéndose a la cláusula del classpath puede cerrar su código mientras lo certifique a través de Sun por las TCK por lo que de esta forma gana un dinero y hace que las mejoras no sean públicas debido a que ella misma es la empresa que crea la implementación y la que certifica las implementaciones.
-
-Esta es la interpretación de la licencia GPLv2 con cláusula classpath pero desde otro punto de vista, ya que la cláusula fue creada para que la GPL no se aplicase como vírica afectando a cualquier software que tuviese contacto con el licenciado y el proyecto tuviese una aceptación mayor.
+Este es un uso de la licencia \emph{GPLv2 con cláusula classpath} pero desde otro punto de vista, la FSF, la cláusula fue creada para que la licencia GPLv2 no se aplicase como vírica afectando a cualquier software que tuviese contacto con el licenciado y el proyecto tuviese una aceptación mayor para impulsar el proyecto Classpath.
 
 \subsection{Sun becomes Oracle}
 
@@ -155,14 +152,25 @@ El abandono de Apache fue un antes y un después con el que nos enlaza la incurs
 
 \subsection{Google}
 
-% TODO: Google con respecto a su implementación de Java y la demanda por parte de Oracle.
-Podemos dividir la demanda de Oracle sobre Google en dos partes:
+Google dio el salto a las tecnologías móviles con Android. ¿ Que es el lenguaje AndroidSDK ? sencillamente AndroidSDK es una implementación de Java propia a partir del proyecto Harmony de Apache licenciado, esta es la parte importante, por una licencia de Software Libre \emph{Apache version 2.0}\footnote{http://source.android.com/source/licenses.html}. Implementó una máquina virtual propia llamada Dalvik\footnote{http://code.google.com/p/dalvik/} desde cero para utilizar con su implementación.
+
+En este par de párrafos a groso modo introducimos a Google en el centro de la tormenta de las licencias con lo que respecta a Java y por consiguiente a la empresa Oracle su propietaria.
+
+Google implementó su propio Java conocido como \emph{AndroidSDK}\footnote{http://developer.android.com/sdk/index.html} e hizo que se expandiese de una manera muy rápida estando en boca de todos, le dio vida y subsistencia, al publicarlo bajo una Licencia de Software Libre.
+
+Oracle por su parte se vio delante de un nuevo frente que no dudó en abrir en 2010 mediante una demanda por infracción de copyright y violación de patentes para salvaguardar su producto y evitar que otros actores ganaser poder de decisión sobre la evolución de otra implementación distinta a la suya además del uso de una nueva VM ajena a ellos.
+
+Podemos dividir la demanda de Oracle sobre Google en dos partes diferenciadas:
 \begin{enumerate}
     \item Infracción del copyright al utilizar Java. Un ataque directo por el uso de Java en los terminales móviles sin contar con JavaME.
     \item Uso de patentes en la máquina virtual Dalvik. Las patentes definidas en la demanda pertenecen al grupo de patentes básicas para la creación de una máquina virtual por lo que podría demandar a cualquier persona/empresa/colectivo que construyese una VM.
 \end{enumerate}
 
-\section{James Gosling}
+La demanda se tildó de paranoica debido a que nadie veía ningún fundamento ya que la implementación no tuvo que pasar por los test TCK y la VM era una implementación nueva específica para la misma implementación. La licencia lo permitía, creó una competencia virtual acabando, como se ha visto con el tiempo, con la especificación JavaME de un plumazo. Las nuevas plataformas móviles han adoptado con agrado la plataforma Android (que proviene de Linux) utilizando su lenguaje (es Java pero no se llama Java) debido a la licencia por la que optó Google, una licencia libre.
+
+La resolución de la demanda falló en favor de Google\footnote{http://www.fayerwayer.com/2012/05/juez-google-no-tendra-que-pagarle-nada-a-oracle-no-infringio-copyright/} por lo que la libertad del desarrollo de software quedó garantizada. El Software Libre en base a sus Licencias protegió al desarrollador, en este caso a una empresa, al ejercer su libertad mediante los medios estipulados, las licencias, la buena elección de una licencia.
+
+\subsection{James Gosling}
 
 No nos acordábamos que todo nació de su mente y del equipo de personas que trabajabaron con él; Arthur Van Hoff\footnote{http://www.linkedin.com/in/aavanhoff}, y Andy Bechtolsheim\footnote{http://en.wikipedia.org/wiki/Andy\_Bechtolsheim}.
 
@@ -170,18 +178,18 @@ Abandonó Oracle en el en 2010\footnote{http://nighthacks.com/roller/jag/entry/t
 
 \section{Echando la vista atrás}
 
-Volvemos a echar la vista al gráfico de la evolución de Java durante esta época y podemos darnos cuenta que entrando en el año 2010 la popularidad de Java sufrió un varapalo importante del que parecía haberse recuperado un año más tarde en 2011 después de haber sorteado el \emph{annus horribilis}\footnote{http://en.wikipedia.org/wiki/Annus\_horribilis}. Más adelante a partir de la mitad de 2011 se aprecia claramente en la gráfica la caída en picado. Dejó de bajar a mediados de 2012, de nuevo a mínimos en comparación consigo misma, coincidiendo el punto de reflotación con la resolución de la senticia sobre la demanda fallando a favor de Google\footnote{http://es.engadget.com/2012/06/21/google-pagara-0-dolares-en-concepto-de-indemnizaciones-a-oracle/}. A partir de este instante, Java vuelve a subir como la espuma.
+Volvemos a echar la vista al gráfico de la evolución de Java durante esta época y podemos darnos cuenta que entrando en el año 2010 la popularidad de Java sufrió un varapalo importante del que parecía haberse recuperado un año más tarde en 2011 después de haber sorteado el \emph{annus horribilis}\footnote{http://en.wikipedia.org/wiki/Annus\_horribilis}. Más adelante a partir de la mitad de 2011 se aprecia claramente en la gráfica la caída en picado. Dejó de bajar a mediados de 2012, de nuevo a mínimos en comparación consigo misma, coincidiendo el punto de reflotación con la resolución de la senticia sobre la demanda fallando a favor de Google. A partir de este instante, Java vuelve a subir como la espuma.
 
-Podremos decir que la sentencia a favor de Google salvaguarda el desarrollo abierto de una implementaciónd de Java, por parte en este caso de una empresa, y la no violación de ninguna patente por parte de la sentencia. Por lo tanto la comunidad respira y Oracle sigue al acecho de Google.
+Podremos decir que la sentencia a favor de Google salvaguarda el desarrollo abierto de una implementación de Java, por parte en este caso de una empresa, y la no violación de ninguna patente por parte de la sentencia. Por lo tanto la comunidad respira y Oracle sigue al acecho de Google.
 
-Una derrota victoriosa.
+Una derrota victoriosa de Oracle.
 
 \section{Implementaciones Alternativas}
 
 Como hemos comentado se han creado alternativas a la JVM oficial de Java e implementaciones bajo Licencias de Software Libre, aquí hay un pequeño resumen de las más conocidas como referencias:
 \begin{itemize}
     \item Dalvik - Google Virtual Machine\footnote{http://code.google.com/p/dalvik/} para ejecutar aplicaciones Android.
-    \item Android - La implementación de Java creada por Google\footnote{http://developer.android.com/sdk/index.html} a partir del proyecto Apache Harmony\footnote{http://harmony.apache.org/} retirado de la Apache Software Foundation.
+    \item AndroidSDK - La implementación de Java creada por Google\footnote{http://developer.android.com/sdk/index.html} a partir del proyecto Apache Harmony\footnote{http://harmony.apache.org/} retirado de la Apache Software Foundation.
     \item Hotspot - OpenJDK Virtual Machine\footnote{http://openjdk.java.net/groups/hotspot/}.
     \item Kaffe - Kaffe is a clean room implementation of the Java virtual machine, plus the associated class libraries needed to provide a Java runtime environment\footnote{http://www.kaffe.org/}.
     \item OpenJDK - The place to collaborate on an open-source implementation of the Java Platform, Standard Edition, and related projects\footnote{http://openjdk.java.net/}.
