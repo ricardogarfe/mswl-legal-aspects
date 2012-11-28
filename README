@@ -31,14 +31,21 @@ Read the article and answer related questions::
 
     http://seattletimes.com/html/localnews/2002686721_chihuly16m.html
 
-This exercise is answered in **001-chihulys-lawsuit.tex** file.
+This exercise is answered in **https://github.com/ricardogarfe/mswl-legal-aspects/blob/master/001-chihulys-lawsuit.tex** file.
+
+SCO Lawsuit
+------------
+
+In 2003 SCO Group claimed a cluster of legal complaints about Unix and Linux source code.
+
+This exercise is answered in **https://github.com/ricardogarfe/mswl-legal-aspects/blob/master/002-SCO-group-lawsuit-against-linux.tex** file.
 
 Software Patents
 ------------------
 
 This exercise is related to software patents in FLOSS project and how to defend FLOSS developers against them.
 
-This exercise is answered in **003-patents-in-floss.tex** file.
+This exercise is answered in **https://github.com/ricardogarfe/mswl-legal-aspects/blob/master/003-patents-in-floss.tex** file.
 
 EUPL
 -----
@@ -47,5 +54,19 @@ This exercise is related FLOSS EUPL - European Union Public Licence::
 
     http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
 
-This exercise is answered in **004-eupl.tex** file.
+This exercise is answered in **https://github.com/ricardogarfe/mswl-legal-aspects/blob/master/004-eupl.tex** file.
+
+GPLv2 vs OSD
+--------------
+
+Please, read GPL version 2, section 8, and check if this section would be in conflict with any criterion of the Open Source Definition (OSD). If you think so, which OSD point would fail? Why? What do you think it is OSD-compliant despite that?
+
+This exercise is answered in **https://github.com/ricardogarfe/mswl-legal-aspects/blob/master/005-gplv2-vs-osd.tex** file.
+
+Final Report
+-------------
+
+Java: historia de una libertad cuestionada:
+
+**https://github.com/ricardogarfe/mswl-legal-aspects/blob/master/006-final-legal-aspects.tex**
 
