@@ -13,8 +13,11 @@
 
 \maketitle
 
+\newpage
+
 \tableofcontents
 
+\newpage
 
 \section{Introducción}
 
@@ -33,8 +36,8 @@ Java es un lenguaje que destaca por su máxima "write once, run anywhere" (WORA)
 Una cosa está clara, Java es un lenguaje de programación libre, si nos acotamos al lenguaje en si. La instalación en nuestro sistema operativo de la versión JDK (Java Development Kit) nos da la posibilidad de utilizar el lenguaje para crear lo que necesitemos mediante su sintaxis haciéndolo funcionar a través de su máquina virtual (JVM).\\
 Como se puede ver, hay dos fases en el desarrollo de un software mediante Java:
 \begin{enumerate}
-\item Desarrollar el Software (incluyo la compilación considerando la compilación como Software en si para el tratamiento en este texto).
-\item Ejecutar el Software indistintamente del entorno.
+    \item Desarrollar el Software (incluyo la compilación considerando la compilación como Software en si para el tratamiento en este texto).
+    \item Ejecutar el Software indistintamente del entorno.
 \end{enumerate}
 
 En el segundo punto nos detenemos ya que es ahí donde Java restringe la libertad y obliga a pasar por su máquina virtual mediante su implementación.
@@ -55,8 +58,10 @@ Empezaremos por la FSF que por medio de Richard Stallman mediante la redacción 
 
 El primer artículo 'La trampa de Java'\footnote{http://www.gnu.org/philosophy/java-trap.es.html} escrito en el año 2004 describe la posición de la FSF recomendando el no uso de la JVM por los desarrolladores Java:
 
+\begin{quotation}
     \emph{Si usted escribe un programa en Java sobre la plataforma Java de Sun, está expuesto a usar funcionalidades exclusivas de Sun sin ni siquiera darse cuenta. Para cuando se dé cuenta, quizás las haya estado usando durante meses, y rehacer el trabajo le tomaría más meses. Podría decir «volver a empezar es demasiado trabajo». Entonces su programa habrá caído en la trampa del Java; será inusable en el mundo Libre.}
-    
+\end{quotation}
+
 Este extracto del texto es el más significativo con respecto a Java y su uso de la JVM en donde nos emplaza al uso de máquinas virtuales Java libres que van haciéndose hueco en el mercado.
 La FSF puso en marcha el proyecto GCJ - \emph{The GNU Compiler for the Java} utilizando los ejemplos de éxito del compilador libre de C (GCC\footnote{http://www.gnu.org/software/gcc/releases.html}) que ofreció una alternativa libre para desarrollar bajo el lenguaje C en entornos libres cuando no existían opciones.
 
@@ -65,8 +70,10 @@ La FSF puso en marcha el proyecto GCJ - \emph{The GNU Compiler for the Java} uti
 A la par, también se creó el proyecto \emph{GNU Classpath}\footnote{http://www.gnu.org/software/classpath/} que aglutina las librerías Java principales para incluirlas en máquinas virtuales de Java y desarrollar bajo esta estructura de una forma completamente libre.
 El proyecto GNU Classpath está publicado bajo GPLv2 (y posteriores) en donde se incluye una cláusula asociada a la licencia:
 
-    \emph{Linking this library statically or dynamically with other modules is making a combined work based on this library. Thus, the terms and conditions of the GNU General Public License cover the whole combination.
-As a special exception, the copyright holders of this library give you permission to link this library with independent modules to produce an executable, regardless of the license terms of these independent modules, and to copy and distribute the resulting executable under terms of your choice, provided that you also meet, for each linked independent module, the terms and conditions of the license of that module. An independent module is a module which is not derived from or based on this library. If you modify this library, you may extend this exception to your version of the library, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version.}
+\begin{quotation}
+    \emph{Linking this library statically or dynamically with other modules is making a combined work based on this library. Thus, the terms and conditions of the GNU General Public License cover the whole combination.\\
+    As a special exception, the copyright holders of this library give you permission to link this library with independent modules to produce an executable, regardless of the license terms of these independent modules, and to copy and distribute the resulting executable under terms of your choice, provided that you also meet, for each linked independent module, the terms and conditions of the license of that module. An independent module is a module which is not derived from or based on this library. If you modify this library, you may extend this exception to your version of the library, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version.}
+\end{quotation}
 
 As such, it can be used to run, create and distribute a large class of applications and applets. When GNU Classpath is used unmodified as the core class library for a virtual machine, compiler for the java languge, or for a program written in the java programming language it does not affect the licensing for.
 
@@ -76,7 +83,9 @@ En donde destacamos que si se utiliza como módulo de un software sin modificaci
 
 En 2006 la empresa Sun empezó a plantearse la publicación de Java como código GPL, mientras la FSF seguía crítica después del anuncio de la propia empresa de publicar pero bajo un acuerdo de no divulgación (NDA inglés) para que los binarios de la JVM pudiesen ser publicados bajo una distribución GNU/Linux, es decir incluir por defecto su intérprete para la expansión de su uso. Caso el cual la FSF no tuvo en consideración debido a que no seguía los criterios de Software Libre ya que seguía aparecer el código fuente:
 
+\begin{quotation}
     \emph{Si examinamos con atención el anuncio de Sun, veremos que representa exactamente estos hechos. No menciona que la plataforma de Java sea software libre, ni siquiera de código abierto. Únicamente predice que la plataforma estará «extensamente disponible» en las «principales plataformas de código abierto». Disponible, es decir, como software privativo, en términos que nos niegan libertad.}
+\end{quotation}
 
 Por lo que la noticia, llamada no noticia por la FSF en el artículo 'El curioso incidente de Sun a durante la noche'\footnote{http://www.gnu.org/philosophy/sun-in-night-time.html} sirvió para continuar adviertiendo del mal uso de Software Libre alrededor de la tecnología Java y continuó a la expectativa del próximo movimiento de la compañía con respecto a su política de libertad, más que nunca observada.
 
@@ -89,12 +98,15 @@ Podemos ver que hay un total de 162 proyectos realizados en Java en la página w
 
 La ASF ha sido un miembro muy activo dentro de la evolución de Java mediante su puesto en el comité ejecutivo de la Java Community Process en el que ha sido nombrado Miembro del Año 4 veces a lo largo de los 10 años que ocupó el puesto. Puesto que dejó atrás debido a sus discrepancias\footnote{http://blogs.apache.org/foundation/date/20101209} con respecto al proceso de licenciamiento sobre \emph{Java SE7}:
 
+\begin{quotation}
     \emph{Oracle provided the EC with a Java SE 7 specification request and license that are self-contradictory, severely restrict distribution of independent implementations of the spec, and most importantly, prohibit the distribution of independent open source implementations of the spec.}
+\end{quotation}
     
 Oracle como dueño de Sun aboga por imponer sus normas por encima de la comunidad con más de 10 años de experiencia en el modelo evolutivo de Java (1998 a 2010), por lo que ASF promueve la no aceptación por parte del Comité Ejecutivo (EC) de la \emph{JCP} de la versión 7 pero se encuentra con un proceso viciado por intereses empresariales que le afectan directamente a ellos mismos como fundación y por tanto a todos los desarrolladores de Java.
 
 Apache llevaba desde 2007 indagando y exponiendo la liberación de los test bajo una licencia libre para poder certificar, esgrimiendo delante de Sun (primero) hasta Oracle que la imposición de normativas en la JCP estaba violando las normas de la misma JCP como describe la 'open letter' de Apache a Sun en 2007\footnote{http://www.apache.org/jcp/sunopenletter.html} donde pone como ejemplos las mismas normas:
 
+\begin{quotation}
   \emph{1) a specification lead cannot "impose any contractual condition
      or covenant that would limit or restrict the right of any
      licensee to create or distribute such Independent
@@ -103,10 +115,13 @@ Apache llevaba desde 2007 indagando y exponiendo la liberación de los test bajo
   \emph{2) a specification lead must license all necessary IP
      royalty-free to any compatible implementation of a
      specification (section 5.B)}
+\end{quotation}
 
 Oracle no acepta que el proyecto Harmony como válido para pasar los test de la \emph{TCK license} por lo que priva a los desarrollodores de Java de una implementación oficial libre en la que puedan respaldar sus proyectos violando las libertades añadiendo restricciones privativas a las licencias TCK para ser incompatibles con las licencias libres\footnote{http://blogs.apache.org/foundation/entry/statement\_by\_the\_asf\_board1}:
 
+\begin{quotation}
     \emph{Through the JSPA, the agreement under which both Oracle and the ASF participate in the JCP, the ASF has been entitled to a license for the test kit for Java SE (the "TCK") that will allow the ASF to test and distribute a release of the Apache Harmony project under the Apache License. Oracle is violating their contractual obligation as set forth under the rules of the JCP by only offering a TCK license that imposes additional terms and conditions that are not compatible with open source or Free software licenses. The ASF believes that any specification lead that doesn't follow the JCP rules should not be able to participate as a member in good standing, and we have exercised our votes on JSRs -- our only real power on the JCP -- accordingly.  We have voted against Sun starting and continuing JSRs, and have made it clear that we would vote against the JSR for Java SE 7 for these reasons.}
+\end{quotation}
 
 Por lo que la ASF acaba diciendo sobre la JCP \emph{"JCP specifications are nothing more than proprietary documentation."} y retirándose del comité debido a la falta de democratización e incursión de Oracle en las propias decisiones de la comunidad como empresa propietaria mediante el licenciamiento privativa que coarta la libertad de obtener una \emph{VM licenciada por TCK libre}.
 
@@ -159,7 +174,7 @@ En este par de párrafos a groso modo introducimos a Google en el centro de la t
 
 Google implementó su propio Java conocido como \emph{AndroidSDK}\footnote{http://developer.android.com/sdk/index.html} e hizo que se expandiese de una manera muy rápida estando en boca de todos, le dio vida y subsistencia, al publicarlo bajo una Licencia de Software Libre.
 
-Oracle por su parte se vio delante de un nuevo frente que no dudó en abrir en 2010 mediante una demanda por infracción de copyright y violación de patentes para salvaguardar su producto y evitar que otros actores ganaser poder de decisión sobre la evolución de otra implementación distinta a la suya además del uso de una nueva VM ajena a ellos.
+Oracle por su parte se vio delante de un nuevo frente que no dudó en abrir en 2010 mediante una demanda por infracción de copyright y violación de patentes (aquí encontramos una explicación más detallada\footnote{http://www.groklaw.net/article.php?story=20100815110101756}) para salvaguardar su producto y evitar que otros actores ganaser poder de decisión sobre la evolución de otra implementación distinta a la suya además del uso de una nueva VM ajena a ellos.
 
 Podemos dividir la demanda de Oracle sobre Google en dos partes diferenciadas:
 \begin{enumerate}
@@ -179,7 +194,7 @@ Jamas Gosling es el creador pero no el propietario de Java, el propietario de Ja
 
 Abandonó Oracle en el en 2010\footnote{http://nighthacks.com/roller/jag/entry/time\_to\_move\_on}, el año más convulso para la compañía. Después de su salida la compañía, la misma se torno más opaca, empezando con la demanda de Oracle a Google y la guerra interna dentro de la JCP con la ASF que hizo que ASF dejara el comité ejecutivo. Gosling nos deja una referencia en su blog personal de lo que supuso para el y a ojos de la comunidad la demanda de Oracle sobre Google por el uso de Java y el incumplimiento de determinadas patentes "The shit finally hits the fan"\footnote{http://nighthacks.com/roller/jag/entry/the\_shit\_finally\_hits\_the}, la mierda ha llegado finalmente al ventilador. Esta frase crea un paralalelismo perfecto describiendo el momento exacto de Oracle, parece que da espadazos sin sentido a ver con lo que topa y tiende a ser el camino del principio la pérdida de muchas miradas de la gente con respecto a Java y esto último es muy personal para Gosling.
 
-\section{Echando la vista atrás}
+\section{Post\-valoración}
 
 Volvemos a echar la vista al gráfico de la evolución de Java durante esta época y podemos darnos cuenta que entrando en el año 2010 la popularidad de Java sufrió un varapalo importante del que parecía haberse recuperado un año más tarde en 2011 después de haber sorteado el \emph{annus horribilis}\footnote{http://en.wikipedia.org/wiki/Annus\_horribilis}. Más adelante a partir de la mitad de 2011 se aprecia claramente en la gráfica la caída en picado. Dejó de bajar a mediados de 2012, de nuevo a mínimos en comparación consigo misma, coincidiendo el punto de reflotación con la resolución de la senticia sobre la demanda fallando a favor de Google. A partir de este instante, Java vuelve a subir como la espuma.
 
